@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+#check if atleast one argument
+if [ -z "$1" ]; then
+    echo 'No bucket name provided.'
+    exit 1
+fi
+
+aws s3api create-bucket --bucket $1
